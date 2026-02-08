@@ -1,0 +1,25 @@
+<section class="card pedidos">
+  <h2>🛒 Realizar Pedido</h2>
+
+  <form>
+    <label>Nombre del Cliente</label>
+    <input type="text" #nombre placeholder="Tu nombre">
+
+    <label>Pedido</label>
+    <textarea #pedido placeholder="Ej: 1 Pollo entero al spiedo, 2 cuartos broaster"></textarea>
+
+    <label>Dirección</label>
+    <input type="text" #direccion placeholder="Tu dirección">
+
+    <a
+      class="btn-pedido"
+      target="_blank"
+      [href]="'https://wa.me/59172447084?text=' +
+        'Hola, soy ' + nombre.value +
+        '. Quiero pedir: ' + pedido.value +
+        '. Dirección: ' + direccion.value"
+    >
+      ✅ Enviar pedido por WhatsApp
+    </a>
+  </form>
+</section>

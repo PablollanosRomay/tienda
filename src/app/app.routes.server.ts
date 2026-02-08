@@ -1,8 +1,3 @@
-import { RenderMode, ServerRoute } from '@angular/ssr';
+// SSR server routes disabled for browser build.
 
-export const serverRoutes: ServerRoute[] = [
-  {
-    path: '**',
-    renderMode: RenderMode.Prerender
-  }
-];
+export {};

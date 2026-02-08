@@ -1,0 +1,156 @@
+/* ================= HOME ================= */
+
+.home{
+  min-height:100vh;
+  padding:2rem 1rem;
+  background: linear-gradient(
+    180deg,
+    #FFD000 0%,
+    #F6B700 50%,
+    #E0A800 100%
+  );
+}
+
+/* GRID 2x2 */
+.home .imagenes{
+  max-width:900px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:1.6rem;
+}
+
+/* TARJETA */
+.home .imagen-card{
+  background: linear-gradient(
+    135deg,
+    #C8102E,
+    #9E1B1B
+  );
+  border-radius:20px;
+  padding:.45rem;
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
+}
+
+/* IMAGEN */
+.home .imagen-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:16px;
+  transition:transform .35s ease;
+  filter:saturate(1.2) contrast(1.1);
+}
+
+/* HOVER */
+.home .imagen-card:hover img{
+  transform:scale(1.05);
+}
+
+/* TEXTO */
+.home .imagen-texto{
+  margin-top:.45rem;
+  text-align:center;
+  font-weight:700;
+  font-size:.95rem;
+  color:#FFD000;
+  text-shadow:1px 2px 4px rgba(0,0,0,.8);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:720px){
+  .home .imagenes{
+    grid-template-columns:1fr;
+  }
+
+  .home .imagen-card img{
+    height:210px;
+  }
+}
+/* ================= MODAL ================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+}
+
+.modal-contenido{
+  position:relative;
+  max-width:90%;
+  max-height:85%;
+}
+
+.modal-contenido img{
+  width:100%;
+  height:auto;
+  border-radius:14px;
+  box-shadow:0 20px 50px rgba(0,0,0,.8);
+}
+
+/* BOTÓN CERRAR */
+.cerrar{
+  position:absolute;
+  top:-14px;
+  right:-14px;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:bold;
+  background:#C8102E;
+  color:#FFD000;
+  box-shadow:0 4px 10px rgba(0,0,0,.6);
+}
+/* ================= MODAL LIGHTBOX ================= */
+.modal {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity:0;
+  pointer-events:none;
+  transition: opacity .3s ease;
+  z-index:100;
+}
+
+.modal img {
+  max-width:90%;
+  max-height:80%;
+  border-radius:16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+
+.modal:target {
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* BOTÓN CERRAR */
+.modal .cerrar {
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:3rem;
+  color:#FFD000;
+  text-decoration:none;
+  font-weight:bold;
+  z-index:101;
+  transition: color .2s ease;
+}
+
+.modal .cerrar:hover {
+  color:#FF4500;
+}

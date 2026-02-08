@@ -1,12 +1,5 @@
-import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
-import { provideServerRendering, withRoutes } from '@angular/ssr';
-import { appConfig } from './app.config';
-import { serverRoutes } from './app.routes.server';
+// Server config disabled for browser build. This project targets
+// Angular 15 (NgModule-based). Restore SSR config only when
+// upgrading Angular and setting up a dedicated server build.
 
-const serverConfig: ApplicationConfig = {
-  providers: [
-    provideServerRendering(withRoutes(serverRoutes))
-  ]
-};
-
-export const config = mergeApplicationConfig(appConfig, serverConfig);
+export {};

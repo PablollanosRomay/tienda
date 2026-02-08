@@ -41,3 +41,8 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+# Large image files
+src/assets/images/menu-item-2.png
+src/assets/images/*.png
+src/assets/images/*.jpg
+src/assets/images/*.jpeg

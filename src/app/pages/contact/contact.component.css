@@ -1,0 +1,72 @@
+/* CONTENEDOR PRINCIPAL */
+.contact {
+  max-width: 520px;
+  margin: 2.5rem auto;
+  padding: 1.8rem;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    var(--surface),
+    rgba(194, 160, 125, 0.15)
+  );
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* TITULO */
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1.4rem;
+  color: var(--accent);
+  font-size: 1.6rem;
+}
+
+/* TEXTO */
+.contact p {
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* DESTACADOS */
+.contact strong {
+  color: var(--primary);
+}
+
+/* ENLACE WHATSAPP */
+.contact a {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.5rem 0.8rem;
+  background: #25D366;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* HOVER */
+.contact a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* HORARIO */
+.contact p:last-child {
+  margin-top: 1.2rem;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .contact {
+    margin: 1.5rem 1rem;
+    padding: 1.3rem;
+  }
+
+  .contact h2 {
+    font-size: 1.4rem;
+  }
+}

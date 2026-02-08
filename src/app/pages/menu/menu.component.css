@@ -1,0 +1,82 @@
+/* CONTENEDOR GENERAL */
+.menu {
+  margin-top: 2rem;
+}
+
+/* TITULOS */
+.menu h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+.menu h3 {
+  margin: 1.5rem 0 0.8rem;
+  color: var(--primary);
+  border-left: 5px solid var(--accent);
+  padding-left: 0.6rem;
+}
+
+/* GRID DE TARJETAS */
+.menu .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* TARJETAS */
+.menu .card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* HOVER */
+.menu .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGEN */
+.menu .card img {
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+}
+
+/* TITULO DEL PRODUCTO */
+.menu .card h4 {
+  margin: 0.4rem 0;
+  color: var(--text);
+}
+
+/* DESCRIPCIÓN */
+.menu .card p {
+  font-size: 0.9rem;
+  color: var(--text);
+  opacity: 0.85;
+  min-height: 45px;
+}
+
+/* PRECIO */
+.menu .card strong {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+/* RESPONSIVE EXTRA */
+@media (max-width: 600px) {
+  .menu h3 {
+    font-size: 1rem;
+  }
+
+  .menu .card img {
+    max-height: 120px;
+  }
+}

@@ -1,12 +1,6 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// This file was intentionally disabled because it conflicts with the
+// existing AppComponent and uses newer standalone APIs.
+// If you want to restore it later, rename to `app.standalone.ts` and
+// update its imports accordingly.
 
-@Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
-})
-export class App {
-  protected readonly title = signal('tienda');
-}
+export {};

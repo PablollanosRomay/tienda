@@ -1,1 +1,207 @@
-/* You can add global styles to this file, and also import other style files */
+/* =================================================
+   POLLERÍA REAL – SPIEDO & BROASTER
+   MEZCLA CÁLIDA / SIN BLANCO
+================================================= */
+
+:root{
+  --bg: #F2C94C;          /* Amarillo dorado */
+  --primary: #E0A800;     /* Dorado fuerte */
+  --accent: #A4161A;      /* Rojo parrilla */
+  --secondary: #6F1D1B;   /* Marrón pollo */
+  --text: #2B1B0E;        /* Marrón oscuro */
+  --surface: #F0B429;     /* Tarjetas */
+}
+
+/* ================= MODO OSCURO ================= */
+.dark-mode{
+  --bg: #1f1f1f;
+  --primary: #E0A800;
+  --accent: #D62828;
+  --secondary: #3a0f0f;
+  --text: #f5f5f5;
+  --surface: #2b2b2b;
+}
+
+/* ================= BASE ================= */
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #FFD166,
+    #E0A800
+  );
+  color: var(--text);
+}
+
+/* ================= CONTENEDOR ================= */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:1rem;
+}
+
+/* ================= HEADER ================= */
+.header{
+  background: linear-gradient(
+    90deg,
+    var(--secondary),
+    var(--accent)
+  );
+  padding:1rem;
+  color:#FFD166;
+  box-shadow:0 4px 14px rgba(0,0,0,.45);
+}
+
+.header .inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+}
+
+/* BOTÓN TEMA */
+.theme-btn{
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--secondary)
+  );
+  color:#FFD166;
+  padding:.5rem 1.3rem;
+  border-radius:30px;
+  border:2px solid #FFD166;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.45);
+}
+
+/* ================= NAV ================= */
+.nav{
+  display:flex;
+  gap:1rem;
+  padding:.8rem 1rem;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--bg)
+  );
+}
+
+.nav a{
+  text-decoration:none;
+  color:#3b240f;
+  padding:.45rem 1rem;
+  border-radius:25px;
+  font-weight:800;
+}
+
+.nav a:hover{
+  background: var(--accent);
+  color:#FFD166;
+}
+
+/* ================= TITULOS ================= */
+h1, h2, h3{
+  color: var(--accent);
+  font-weight:900;
+  text-shadow:2px 2px 0 rgba(0,0,0,.25);
+}
+
+/* ================= TEXTO ================= */
+p, li, span, small{
+  color:#3b240f;
+  font-weight:600;
+}
+
+/* ================= TARJETAS ================= */
+.card{
+  background: linear-gradient(
+    135deg,
+    #FFD166,
+    var(--surface)
+  );
+  padding:1.5rem;
+  border-radius:20px;
+  box-shadow:0 14px 32px rgba(0,0,0,.35);
+  border-top:7px solid var(--accent);
+}
+
+/* CONTACTOS – ETIQUETAS */
+.card strong,
+.card label{
+  color: var(--secondary);
+  font-weight:900;
+}
+
+.card p,
+.card span{
+  color:#2B1B0E;
+  font-size:1.05rem;
+}
+
+/* ================= GRID ================= */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.5rem;
+}
+
+/* ================= IMÁGENES ================= */
+.img-responsive{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+}
+
+/* ================= BOTONES ================= */
+button,
+.btn,
+.btn-pedido{
+  background: linear-gradient(
+    135deg,
+    #25D366,
+    #128C7E
+  );
+  color:#ffffff;
+  padding:.75rem 1.6rem;
+  border:none;
+  border-radius:35px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+.footer{
+  margin-top:2rem;
+  padding:1.4rem;
+  text-align:center;
+  background: linear-gradient(
+    90deg,
+    var(--secondary),
+    var(--accent)
+  );
+  color:#FFD166;
+  font-weight:700;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:600px){
+  .nav{
+    flex-wrap:wrap;
+  }
+
+  .header .inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
