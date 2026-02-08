@@ -46,3 +46,4 @@ src/assets/images/menu-item-2.png
 src/assets/images/*.png
 src/assets/images/*.jpg
 src/assets/images/*.jpeg
+node_modules
